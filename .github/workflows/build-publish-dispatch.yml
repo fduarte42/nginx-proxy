@@ -38,7 +38,8 @@ jobs:
         uses: docker/metadata-action@v6
         with:
           images: |
-            nginxproxy/nginx-proxy
+            ghcr.io/fduarte42/nginx-proxy
+            fduarte42/nginx-proxy
           tags: |
             type=raw,value=${{ inputs.image_tag }},enable=${{ matrix.flavor == 'debian' }}
             type=raw,value=${{ inputs.image_tag }},suffix=-alpine,enable=${{ matrix.flavor == 'alpine' }}
